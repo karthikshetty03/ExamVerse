@@ -8,9 +8,9 @@ const BlogPostForm = ({ onSubmit, initialValues }) => {
 		<View>
 			<Text style={styles.label}>Enter Title : </Text>
 			<TextInput style={styles.input} value={title} onChangeText={(text) => setTitle(text)} />
-			<Text style={styles.label}>Enter Content : </Text>
+			<Text style={styles.label}>Enter 4 Options : </Text>
 			<TextInput style={styles.input} value={content} onChangeText={(text) => setContent(text)} />
-			<Button title="Save Blog Post" onPress={() => onSubmit(title, content)} />
+			<Button title="Save" onPress={() => onSubmit(title, content)} />
 		</View>
 	);
 };
