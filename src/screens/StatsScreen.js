@@ -16,10 +16,10 @@ const StatScreen = ({ navigation }) => {
 			<ScrollView scrollEnabled={true} showsVerticalScrollIndicator={false}>
 				<Image source={require('../../assets/TestResult.png')} />
 				<View style={styles.cont}>
-					<TouchableOpacity onPress={() => navigation.navigate('Update', { id: res })} style={styles.tch} />
+					<TouchableOpacity style={styles.tch} />
 				</View>
 				<View style={styles.cont1}>
-					<TouchableOpacity onPress={() => console.log('H')} style={styles.tch1} />
+					<TouchableOpacity onPress={() => navigation.navigate('Update', { id: res })} style={styles.tch1} />
 				</View>
 				<View style={styles.cont5}>
 					<TouchableOpacity onPress={() => console.log('H')} style={styles.tch5} />
