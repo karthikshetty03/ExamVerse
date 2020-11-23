@@ -14,7 +14,8 @@ const EditScreen = ({ navigation }) => {
 		<View>
 			<Text style={styles.txt}>{navigation.getParam('title')}</Text>
 			<BlogPostForm
-				initialValues={{ title: blogPost.title, content: blogPost.content }}
+				res={0}
+				initialValues={{ title: '', content: blogPost.content }}
 				onSubmit={(title, content) => {
 					editBlogPost(res, title, content, () => {
 						navigation.pop();
@@ -29,9 +30,9 @@ const styles = StyleSheet.create({
 	txt: {
 		fontSize: 25,
 		textAlign: 'center',
-		backgroundColor: 'rgba(0,0,0,0.2)',
-		height: 50,
-		marginBottom: 20,
+		textAlignVertical: 'center',
+		backgroundColor: '#00CED1',
+		height: 100,
 		fontWeight: 'bold',
 		justifyContent: 'center'
 	}

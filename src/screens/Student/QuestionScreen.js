@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { View, Image, TouchableOpacity, StyleSheet, Picker, Text } from 'react-native';
+import { ScrollView } from 'react-native';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { FontAwesome } from '@expo/vector-icons';
-import { ScrollView } from 'react-native';
 
 const QuestionScreen = ({ navigation }) => {
 	const [ res, setRes ] = useState(0);
@@ -14,6 +14,10 @@ const QuestionScreen = ({ navigation }) => {
 				{res == 1 ? <Image source={require('../../../assets/FinalQ.png')} /> : null}
 
 				{res == 2 ? <Image source={require('../../../assets/FinalSideQ.png')} /> : null}
+
+				{res !== 2 ? (
+					<FontAwesome5 style={styles.cont5} name="hourglass-start" size={45} color="black" />
+				) : null}
 
 				<TouchableOpacity
 					style={styles.cont1}
@@ -52,7 +56,7 @@ const styles = StyleSheet.create({
 		height: 60,
 		top: 80,
 		right: 5
-		//backgroundColor: 'black'
+		//backgroundColor: 'white'
 	},
 	cont2: {
 		position: 'absolute',
@@ -60,7 +64,7 @@ const styles = StyleSheet.create({
 		height: 50,
 		top: 80,
 		left: 5
-		//backgroundColor: 'rgba(0,0,0,0.5)'
+		//backgroundColor: 'white'
 	},
 	cont3: {
 		position: 'absolute',
@@ -76,6 +80,14 @@ const styles = StyleSheet.create({
 		height: 60,
 		top: 380,
 		left: 0
+		//backgroundColor: 'black'
+	},
+	cont5: {
+		position: 'absolute',
+		width: 150,
+		height: 60,
+		top: 180,
+		left: 20
 		//backgroundColor: 'black'
 	},
 

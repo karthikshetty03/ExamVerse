@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
 		flex: 1,
 		flexDirection: 'row',
 		justifyContent: 'space-between',
-		backgroundColor: 'aqua'
+		backgroundColor: '#7bdff2'
 	},
 
 	cont1: {
@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
 		height: 200,
 		width: 200,
 		justifyContent: 'center',
-		backgroundColor: 'blue'
+		backgroundColor: 'black'
 	},
 	cont2: {
 		flexDirection: 'row',

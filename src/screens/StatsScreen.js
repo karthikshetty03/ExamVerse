@@ -21,9 +21,15 @@ const StatScreen = ({ navigation }) => {
 				<View style={styles.cont1}>
 					<TouchableOpacity onPress={() => console.log('H')} style={styles.tch1} />
 				</View>
+				<View style={styles.cont5}>
+					<TouchableOpacity onPress={() => console.log('H')} style={styles.tch5} />
+				</View>
+				<View style={styles.cont6}>
+					<TouchableOpacity onPress={() => console.log('H')} style={styles.tch6} />
+				</View>
 			</ScrollView>
 			<View style={styles.bg}>
-				<Text style={styles.header}>{blogPost.title}</Text>
+				<Text style={styles.header}>Quiz 1</Text>
 			</View>
 		</View>
 	);
@@ -48,23 +54,45 @@ const styles = StyleSheet.create({
 	},
 	cont: {
 		position: 'absolute',
-		bottom: 75,
-		left: 120
+		bottom: 70,
+		left: 15
 	},
 	tch: {
 		height: 30,
-		width: 170,
+		width: 180,
 		borderRadius: 20,
 		backgroundColor: 'rgba(0,100,255,0.3)'
 	},
 	cont1: {
 		position: 'absolute',
-		bottom: 35,
-		left: 80
+		bottom: 70,
+		left: 220
 	},
 	tch1: {
 		height: 30,
-		width: 260,
+		width: 180,
+		backgroundColor: 'rgba(100,0,255,0.3)',
+		borderRadius: 20
+	},
+	cont5: {
+		position: 'absolute',
+		bottom: 24,
+		left: 220
+	},
+	tch5: {
+		height: 30,
+		width: 190,
+		backgroundColor: 'rgba(100,0,255,0.3)',
+		borderRadius: 20
+	},
+	cont6: {
+		position: 'absolute',
+		bottom: 25,
+		left: 10
+	},
+	tch6: {
+		height: 30,
+		width: 190,
 		backgroundColor: 'rgba(100,0,255,0.3)',
 		borderRadius: 20
 	}

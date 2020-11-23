@@ -29,7 +29,7 @@ const IndexScreen = ({ navigation }) => {
 							return (
 								<TouchableOpacity onPress={() => navigation.navigate('Show', { id: item.id })}>
 									<View style={styles.row}>
-										<Text style={styles.title}>{item.title}</Text>
+										<Text style={styles.title}>Test 1</Text>
 										<TouchableOpacity onPress={() => deleteBlogPost(item.id)}>
 											<Feather style={styles.icon} name="trash" size={24} color="black" />
 										</TouchableOpacity>
@@ -47,7 +47,7 @@ const IndexScreen = ({ navigation }) => {
 							return (
 								<TouchableOpacity onPress={() => navigation.navigate('Stat', { id: item.id })}>
 									<View style={styles.row}>
-										<Text style={styles.title}>{item.title}</Text>
+										<Text style={styles.title}>Quiz 1</Text>
 										<TouchableOpacity onPress={() => deleteBlogPost(item.id)}>
 											<Feather style={styles.icon} name="trash" size={24} color="black" />
 										</TouchableOpacity>
@@ -68,9 +68,12 @@ const IndexScreen = ({ navigation }) => {
 IndexScreen.navigationOptions = ({ navigation }) => {
 	return {
 		headerRight: (
-			<TouchableOpacity onPress={() => navigation.navigate('Create', { title: 'Create a new test' })}>
-				<Feather name="plus" size={30} />
-			</TouchableOpacity>
+			<View style={styles.rw}>
+				<Text style={styles.txt}>New Test</Text>
+				<TouchableOpacity onPress={() => navigation.navigate('Create', { title: 'Create a new test' })}>
+					<Feather name="file-plus" size={40} color="black" />
+				</TouchableOpacity>
+			</View>
 		)
 	};
 };
@@ -114,6 +117,17 @@ const styles = StyleSheet.create({
 	cont1: {
 		position: 'absolute',
 		top: 555
+	},
+	rw: {
+		flexDirection: 'row',
+		flex: 1
+	},
+	txt: {
+		fontSize: 20,
+		position: 'absolute',
+		top: 10,
+		right: 50,
+		fontWeight: 'bold'
 	}
 });
 

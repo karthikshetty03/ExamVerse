@@ -2,7 +2,7 @@ import react from 'react';
 import React, { useContext } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
 import { Context as BlogContext } from '../context/BlogContext';
-import { Feather } from '@expo/vector-icons';
+import { AntDesign } from '@expo/vector-icons';
 
 import { ScrollView } from 'react-native';
 
@@ -34,12 +34,17 @@ const ShowScreens = ({ navigation }) => {
 ShowScreens.navigationOptions = ({ navigation }) => {
 	return {
 		headerRight: (
-			<TouchableOpacity
-				onPress={() =>
-					navigation.navigate('Create', { id: navigation.getParam('id'), title: 'Create a new question' })}
-			>
-				<Feather name="plus" size={30} />
-			</TouchableOpacity>
+			<View style={styles.mn}>
+				<Text style={styles.txt}>Add a question</Text>
+				<TouchableOpacity
+					onPress={() =>
+						navigation.navigate('Edit', { id: navigation.getParam('id'), title: 'Create a new question' })}
+				>
+					<View style={styles.icn}>
+						<AntDesign name="pluscircle" size={30} color="black" />
+					</View>
+				</TouchableOpacity>
+			</View>
 		)
 	};
 };
@@ -74,6 +79,21 @@ const styles = StyleSheet.create({
 		bottom: 60,
 		left: 55
 		//backgroundColor: 'black'
+	},
+	txt: {
+		position: 'absolute',
+		right: 50,
+		top: 15,
+		fontWeight: 'bold',
+		fontSize: 20
+	},
+	mn: {
+		flexDirection: 'row',
+		flex: 1
+	},
+	icn: {
+		marginTop: 10,
+		marginRight: 10
 	}
 });
 export default ShowScreens;
