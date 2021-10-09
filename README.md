@@ -1,4 +1,4 @@
-## Instructions to ru the app : 
+## Instructions to run the app 
 1. Download the expo app from playstore
 2. Clone this repo and change into the project directory
 3. Run *npm install*
